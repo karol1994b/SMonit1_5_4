@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='SMonit1_5_4'

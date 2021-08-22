@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MonitActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dataUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data update"
+            android:textSize="12dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ScrollView
+            android:id="@+id/viewScroll"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txtReceive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_marginTop="0dp"
+                android:background="#eeeeee"
+                android:textSize="11dp"
+                android:hint="Update will be there in a second..."
+                android:scrollbars="vertical"
+                android:typeface="monospace"
+                android:maxLength="1000000"
+                android:maxLines="1000000" />
+            <!-- android:visibility="invisible" -->
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onSaveClicked"
+            android:text="Save" />
+
+        <TextView
+            android:id="@+id/textview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip: Click on the button SAVE to store data in the text file and the SQLite database. This may take a few seconds"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plot"
+            style="@style/APDefacto.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:domainTitle="kolejne indeksy - iteracja X"
+            app:rangeTitle="Napięcie-Kanał X"
+            app:title="SYMULOWANE EKG"
+            app:titleTextSize="14dp" />
+
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plot0"
+            style="@style/APDefacto.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:domainTitle="kolejne indeksy - iteracja0"
+            app:rangeTitle="Napięcie-Kanał 0"
+            app:title="Wykres0 EKG"
+            app:titleTextSize="14dp" />
+
+
+        <com.androidplot.xy.XYPlot
+            android:id="@+id/plot1"
+            style="@style/APDefacto.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:domainTitle="kolejne indeksy - iteracja1"
+            app:rangeTitle="Napięcie-Kanał 1"
+            app:title="Wykres1 EKG"
+            app:titleTextSize="14dp" />
+
+
+        <com.androidplot.xy.XYPlot
+        android:id="@+id/plot2"
+        style="@style/APDefacto.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:domainTitle="kolejne indeksy - iteracja2"
+        app:rangeTitle="Napięcie-Kanał 2"
+        app:title="Wykres2 EKG"
+        app:titleTextSize="14dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
